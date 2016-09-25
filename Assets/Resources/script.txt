@@ -1,0 +1,63 @@
+[S_C1_00]
+
+Bart	Sleeping	Zzzzz...
+Theia	Curious		...
+Theia	Curious 	*poke*
+Bart	Waking	Mmn...
+Theia	Mischievous	*kick*
+Bart	Surprised	OW!
+Bart	Confused	Huh? Wha? Who?
+Theia	Smiling	Sorry, did I wake you?
+Bart	Ticked	What? No, of course not. I always wake up yelling in pain, best way to start the day!
+Theia	Disgusted	Oh no, you're not one of those masochist types, are you? Suddenly I feel like I need a shower.
+Theia	Neutral	Also, it's already after noon, if you're just now starting your day, then I guess you're masochistic AND lazy.
+Bart	Surprised	Hey! I resent being called lazy!
+Bart	Boasting	I just like my afternoon naps is all.
+Theia	Mortified	(He didn't deny being called a masochist!!)
+Bart	Upset	Anyways, who ARE you? Did you just come here to harass me?
+Theia	Neutral	Pretty much, actually. My name's Theia. I normally train out here by the pond, but today you're in my spot, Mr. Suspicious Masochist.
+Bart	Lethargic	As much as I love cute nicknames, I'd prefer it if you called me Bart. Am I really that suspicious looking?
+Theia	Mortified	(He ignored it again!)
+Theia	Neutral	Well you don't seem dangerous. At least not in a literal sense of the word.
+Theia	Neutral	You're not wearing a uniform though, and I haven't seen you around the school before. Are you new here?
+Bart	Smiling	Yep!
+Bart	Neutral	Well, I WILL be, at least. When I showed up, they let me in as an applicant, then told me it's up to me to get my hands on a admission certificate.
+Theia	Neutral	I see, so you've just started the application process. Have you asked around to find out the criteria for admission?
+Bart	Smiling	Nope!
+Theia	Irritated	Then why are you just lazing around like this?!
+Bart	Neutral	Well they never said there was any kind of deadline, and I'm in no hurry. I figured if I just hung around for a bit, everything would eventually work out.
+Theia	Irritated	"Everything would work out"? That zenlike attitude of yours kind of pisses me off.
+Bart	Boasting	"The Zen Master knows that inaction is just as precious as action!"
+Theia	Irritated	(Some Zen Master... this guy's definitely just lazy)
+Bart	Neutral	You know I can hear you when you talk to yourself like that, right?
+Theia	Irritated	(And masochistic. A lazy suspicious masochist)
+Bart	Neutral	Even I have feelings, you know!
+Theia	Sighing	*sigh* As much as I want to leave you alone out of spite, I remember how hard the entrance process was to me, so I'll give you a clue.
+Bart	Dazzled	You will?? Thank you so much!
+Theia	Neutral	There are eight different criteria by which the university judges its applicants. If you can prove yourself in any of those eight criteria, you'll be admitted.
+Bart	Neutral	Eight different ways to be admitted? Sounds like a cinch. What are the different criteria?
+Theia	Neutral Combat, Economics, Diplomacy, Subterfuge, Strategy, Ancient History, Chivalry, and Physiology
+Bart	Neutral	Whoa, and what do I have to do for each?
+Theia	Neutral Nobody knows all eight criteria except the professors who oversee admission, and they're super tight lipped about them. I only know of two.
+Theia	Boasting	The first is how I got admitted, trial by combat! Basically, you have to challenge any of the students to a duel and win!
+Bart	Neutral (hmm...)
+Theia	Neutral	The second is diplomacy. If you can have a student or professor at the academy vouch for you, you'll be admitted on the spot.
+Bart	:3	So...
+Theia	Neutral	Before you ask, no. I won't put my credibility on the line for some applicant I just met. 
+Bart	Sighing Fair enough.
+Theia	Neutral	Now if you'll excuse me, unless you want to challenge me to a battle, I need to start training.
+
+[S_C1_01]
+
+Theia	Neutral	What's up?
+Bart	>
+S_C1_01.A	Let's have that duel!
+S_C1_01.B	How's about a practice match?
+S_C1_01.C	I just wanted to chat...
+S_C1_01.D	I had a question...
+
+[S_C1_01.A]
+
+Bart	Enthusiastic	Let's have that duel!
+Theia	Neutral	Are you sure? I'm not giving you any rematches if you lose.
+Bart	>
