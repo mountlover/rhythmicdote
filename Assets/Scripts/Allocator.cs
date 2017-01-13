@@ -1,52 +1,68 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace Rhythmicdote
 {
     // The Allocator is for keeping track of when it's okay to deallocate tiles. Important for multiplayer.
-    public class Allocator
+    public class Allocator : MonoBehaviour
     {
-        Dictionary<string, Chunk> chunkRefs = new Dictionary<string, Chunk>();
-        public Allocator()
+        static Dictionary<string, Chunk> chunkRefs;
+        static Queue<Chunk> drawQueue;
+        bool loaded = false;
+        void Start()
         {
-
+            chunkRefs = new Dictionary<string, Chunk>();
+            drawQueue = new Queue<Chunk>();
+            loaded = true;
+        }
+        void Update()
+        {
+            if (!loaded) return;
+            while (drawQueue.Count != 0)
+            {
+                draw(drawQueue.Dequeue());
+            }
         }
 
-        public void deallocate(Chunk chunk)
+        private void draw(Chunk chunk)
         {
-            if(!chunkRefs.ContainsKey(chunk))
+            // TODO look up chunk, create associated sprites, and pass references into chunk object
+        }
+
+        public static void Deallocate(int x, int y)
+        {
+            Chunk val;
+            if (!chunkRefs.TryGetValue(x + "," + y, out val))
             {
                 throw new InvalidChunkException();
             }
-            chunkRefs.chunkRefs.TryGetValue(chunk)
+            if(val.Dereference())
+            {
+                val.Destroy();
+                chunkRefs.Remove(x + "," + y);
+            }
         }
 
-        public Chunk allocate()
+        public static void Deallocate(Chunk c)
         {
-            
+            if (c == null) return;
+            Deallocate(c.Horizontal, c.Vertical);
         }
 
-    }
-
-    public class Chunk
-    {
-        float size_units;
-        int references;
-        private Chunk(int indexX, int indexY, int scale)
+        public static Chunk Allocate(int indexX, int indexY, int scale)
         {
-            size_units = scale * GlobalFunctions.TILE_SIZE / GlobalFunctions.PIXELS_PER_UNIT;
-            references = 1;
-        }
-        public void addRef()
-        {
-            references++;
-        }
-        public bool dereference()
-        {
-            if (--references <= 0)
-                return true;
-            return false;
+            Chunk val;
+            // if this chunk has already been drawn, add one to the references counter and return it
+            if (chunkRefs.TryGetValue(indexX + "," + indexY, out val))
+            {
+                val.AddReference();
+                return val;
+            }
+            List<Sprite> spriteRefs = new List<Sprite>();
+            val = new Chunk(indexX, indexY, scale, spriteRefs);
+            chunkRefs.Add(indexX + "," + indexY, val);
+            drawQueue.Enqueue(val);
+            return val;
         }
     }
 }

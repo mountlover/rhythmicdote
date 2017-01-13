@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System;
 
 namespace Rhythmicdote
 {
@@ -7,9 +6,9 @@ namespace Rhythmicdote
     {
         public const int PIXELS_PER_UNIT = 60;
         public const int TILE_SIZE = 360;
-        public static float snap(float val)
+        public static float Snap(double val)
         {
-            return Mathf.Round(val * PIXELS_PER_UNIT) / PIXELS_PER_UNIT;
+            return (float)Math.Round(val * PIXELS_PER_UNIT) / PIXELS_PER_UNIT;
         }
     }
 }
