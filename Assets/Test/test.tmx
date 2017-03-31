@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="8" height="6" tilewidth="60" tileheight="60" nextobjectid="78">
+ <tileset firstgid="1" name="placeholder_spritesheet_01" tilewidth="60" tileheight="60" tilecount="25" columns="5">
+  <image source="../Resources/placeholder_spritesheet_01.png" width="300" height="300"/>
+  <terraintypes>
+   <terrain name="New Terrain" tile="-1"/>
+  </terraintypes>
+  <tile id="13" terrain=",,,0"/>
+  <tile id="14" terrain=",,0,"/>
+  <tile id="18" terrain=",0,,0"/>
+  <tile id="19" terrain="0,,0,"/>
+  <tile id="23" terrain=",0,,"/>
+  <tile id="24" terrain="0,,,"/>
+ </tileset>
+ <tileset firstgid="26" name="Sprites" tilewidth="1" tileheight="1" tilecount="0" columns="0"/>
+ <layer name="Terrain Layer" width="8" height="6">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1
+</data>
+ </layer>
+ <objectgroup name="Ground Layer">
+  <object id="63" gid="24" x="165" y="315" width="60" height="60"/>
+  <object id="64" gid="25" x="225" y="315" width="60" height="60"/>
+ </objectgroup>
+ <objectgroup name="Ground Layer Collision">
+  <object id="74" x="211" y="256" width="51.6667" height="25"/>
+ </objectgroup>
+ <objectgroup name="Elevated Layer">
+  <object id="70" gid="19" x="165" y="255" width="60" height="60"/>
+  <object id="71" gid="20" x="225" y="255" width="60" height="60"/>
+  <object id="72" gid="14" x="165" y="195" width="60" height="60"/>
+  <object id="73" gid="15" x="225" y="195" width="60" height="60"/>
+ </objectgroup>
+ <objectgroup name="Elevated Layer Collision">
+  <object id="75" x="219.667" y="227.333" width="27.6667" height="28.6667"/>
+  <object id="77" x="191.333" y="152.667" width="82.3333" height="77.3333">
+   <ellipse/>
+  </object>
+ </objectgroup>
+</map>

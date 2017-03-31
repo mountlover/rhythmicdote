@@ -4,7 +4,7 @@ namespace Rhythmicdote
 {
     public class GlobalFunctions
     {
-        public const int PIXELS_PER_UNIT = 60;
+        public const int PIXELS_PER_UNIT = 40;
         public const int TILE_SIZE = 360;
         public static float Snap(double val)
         {
